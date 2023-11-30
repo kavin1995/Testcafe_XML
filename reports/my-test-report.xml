@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 118.0.0.0 / Windows 10" tests="1" failures="1" skipped="0" errors="1" time="3.91" timestamp="Thu, 02 Nov 2023 12:24:54 GMT" >
+  <testcase classname="Getting Started with Guidewire application" file="C:\Users\VDI022\Test_Cafe\tests\testscript\login.js" name="Guidewire Application Login" time="2.136">
+    <failure>
+    <![CDATA[
+      1) ReferenceError: Selector is not defined
+
+         Browser: Chrome 118.0.0.0 / Windows 10
+
+             1 |import Page from '../page_model/loginpage';
+             2 |fixture ('Getting Started with Guidewire application')
+             3 |    .page('http://192.168.20.201:8180/pc/PolicyCenter.do');
+             4 |
+             5 |test('Guidewire Application Login',async t=>{    
+          >  6 |    await t.typeText(Selector('[id="Login:LoginScreen:LoginDV:username-inputEl"]', 'exp_test'))
+             7 |    await t.typeText(Page.password, 'exp_test')
+             8 |    await t.click(Page.submitbtn)
+             9 |    //await t.expect(Selector('[id="title-1192-textEl"]').innerText).contains('My Activities')
+            10 |})   
+            11 |
+
+            at <anonymous> (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:6:13)
+            at asyncGeneratorStep (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:1:44)
+            at _next (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:1:44)
+            at <anonymous> (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:1:44)
+            at apply (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:1:44)
+            at <anonymous> (C:\Users\VDI022\Test_Cafe\tests\testscript\login.js:10:2)
+    ]]>
+    </failure>
+  </testcase>
+</testsuite>
